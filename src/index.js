@@ -7,6 +7,12 @@ const port = 3000;
 
 app.use(express.static(path.join(__dirname,'public')));
 
+// XMLHttpRequest, fetch, axios, ...
+app.use(express.urlencoded({
+  extended: true
+}));
+app.use(express.json());
+
 // HTTP logger
 app.use(morgan('combined'));
 
@@ -20,12 +26,22 @@ app.set('views','./src/resources/views');
 //Route
 app.get('/', (req, res) => {
     res.render('home');
-})
+});
 
 app.get('/news', (req, res) => {
   res.render('news');
-})
+});
+
+app.get('/search', (req, res) => {
+  res.render('search');
+});
+
+app.post('/search', (req, res) => {
+  console.log(req.body);
+
+  res.send('');
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
-})
+});
