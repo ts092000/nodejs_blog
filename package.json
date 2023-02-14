@@ -26,7 +26,7 @@
   "homepage": "https://github.com/ts092000/nodejs_blog#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && git add -A ."
     }
   },
   "lint-staged": {
