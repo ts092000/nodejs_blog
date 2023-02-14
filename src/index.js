@@ -27,12 +27,12 @@ app.engine(
         extname: '.hbs',
     }),
 );
-      app.set('view engine', 'hbs');
+app.set('view engine', 'hbs');
 app.set('views', './src/resources/views');
 
 //Route init
-      route(app);
+  route(    app);
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
-});
+    app.listen(port, () => {
+        console.log(`Example app listening on port ${port}`);
+    });
