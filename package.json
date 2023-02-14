@@ -7,7 +7,8 @@
     "beautiful": "lint-staged",
     "start": "nodemon --inspect ./src/index.js",
     "watch": "node-sass --watch ./src/resources/scss/ --output src/public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -26,11 +27,11 @@
   "homepage": "https://github.com/ts092000/nodejs_blog#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && git add -A ."
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "./src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
   },
   "dependencies": {
     "express-handlebars": "^6.0.7"
