@@ -1,6 +1,2 @@
-h1 {
-  font-size: 1.5rem;
-  color: red; }
-
-h2 {
-  color: blue; }
+.card.card-course-item {
+  margin-top: 16px; }
